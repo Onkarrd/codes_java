@@ -1,5 +1,3 @@
-package com.example.demo;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,7 +84,7 @@ public class PrintDigitsinInwardCircle {
             input.add(i);
         return input;
     }
-
+    
     static String getValue(List<Integer> list, int listIndex) {
         return list.size() > listIndex ? String.valueOf(list.get(listIndex)) : "*";
     }
