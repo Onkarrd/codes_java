@@ -1,8 +1,9 @@
 package random;
 
-import code.util.ListNode;
+import util.ListNode;
 import java.util.ArrayList;
 import java.util.List;
+import util.ListNode;
 
 class IsPalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {

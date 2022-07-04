@@ -1,6 +1,6 @@
 package random;
 
-import code.util.ListNode;
+import util.ListNode;
 
 public class AddTwoNumbersLinkedList {
     public static void main(String[] args) {

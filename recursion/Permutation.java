@@ -1,6 +1,6 @@
 package recursion;
 
-import code.util.MyUtil;
+import util.MyUtil;
 
 public class Permutation {
 
