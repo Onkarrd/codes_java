@@ -1,4 +1,4 @@
-package com.company;
+package random;
 
 import java.util.Map;
 

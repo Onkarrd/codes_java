@@ -35,10 +35,9 @@ interface Test {
     }
 
     public abstract void am1();
-
 }
 
-public class TestMethods {
+public class TestDefaultAndStaticMethods {
     public static void main(String[] args) {
 
         Test t = () -> {
