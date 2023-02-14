@@ -1,6 +1,6 @@
 package arrays.sortings;
 
-import util.MyUtil;
+import util.ArrayUtil;
 
 public class InsertionSort {
 
@@ -15,6 +15,6 @@ public class InsertionSort {
       }
       a[j + 1] = k;
     }
-    MyUtil.printArray(a);
+    ArrayUtil.printArray(a);
   }
 }

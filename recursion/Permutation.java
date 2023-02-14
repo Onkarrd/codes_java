@@ -1,6 +1,6 @@
 package recursion;
 
-import util.MyUtil;
+import util.ArrayUtil;
 
 public class Permutation {
 
@@ -17,9 +17,9 @@ public class Permutation {
       System.out.println(String.valueOf(chars));
     } else {
       for (int i = l; i <= r; i++) {
-        MyUtil.swap(chars, l, i);
+        ArrayUtil.swap(chars, l, i);
         printPermutations(chars, l + 1, r);
-        MyUtil.swap(chars, l, i);
+        ArrayUtil.swap(chars, l, i);
       }
     }
   }

@@ -1,5 +1,8 @@
 package util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Employee {
 
   public Employee(int id, String name, int age) {
@@ -43,5 +46,13 @@ public class Employee {
 
   public void setAge(int age) {
     this.age = age;
+  }
+
+  public static List<Employee> getEmployees(int count) {
+    List<Employee> emlpoyees = new ArrayList<>();
+    for (int j = 1; j <= count; j++) {
+      emlpoyees.add(new Employee(j, j % 2 == 0 ? "Mark" : "Jack", j * 7));
+    }
+    return emlpoyees;
   }
 }

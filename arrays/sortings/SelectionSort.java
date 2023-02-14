@@ -1,6 +1,6 @@
 package arrays.sortings;
 
-import util.MyUtil;
+import util.ArrayUtil;
 
 public class SelectionSort {
 
@@ -22,10 +22,10 @@ public class SelectionSort {
       if (!foundMin) {
         break;
       }
-      MyUtil.swap(a, i, min);
+      ArrayUtil.swap(a, i, min);
     }
 
-    MyUtil.printArray(a);
+    ArrayUtil.printArray(a);
     System.out.println("counter : " + counter);
   }
 }

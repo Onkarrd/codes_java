@@ -1,6 +1,6 @@
 package arrays.sortings;
 
-import util.MyUtil;
+import util.ArrayUtil;
 
 public class BubbleSort {
 
@@ -13,13 +13,13 @@ public class BubbleSort {
       for (int j = n; j > i; j--) {
         {
           if (a[j] < a[j - 1]) {
-            MyUtil.swap(a, j, j - 1);
+            ArrayUtil.swap(a, j, j - 1);
           }
         }
-        MyUtil.printArray(a);
+        ArrayUtil.printArray(a);
       }
     }
     System.out.println(">>>");
-    MyUtil.printArray(a);
+    ArrayUtil.printArray(a);
   }
 }

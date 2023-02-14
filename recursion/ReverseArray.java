@@ -1,6 +1,6 @@
 package recursion;
 
-import util.MyUtil;
+import util.ArrayUtil;
 
 public class ReverseArray {
 
@@ -9,14 +9,14 @@ public class ReverseArray {
     int i = 0;
     int n = arr.length;
     reverseArr(arr, i, n);
-    MyUtil.printArray(arr);
+    ArrayUtil.printArray(arr);
   }
 
   private static void reverseArr(int[] arr, int i, int n) {
-      if (i > n / 2) {
-          return;
-      }
-    MyUtil.swap(arr, i, n - i - 1);
+    if (i > n / 2) {
+      return;
+    }
+    ArrayUtil.swap(arr, i, n - i - 1);
     reverseArr(arr, i + 1, n);
   }
 
