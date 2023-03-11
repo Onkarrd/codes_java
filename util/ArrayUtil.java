@@ -1,5 +1,6 @@
 package util;
 
+import java.util.List;
 import java.util.Random;
 
 public class ArrayUtil {
@@ -43,5 +44,29 @@ public class ArrayUtil {
     }
     return arr;
   }
+
+  public static void printMatrix(int[][] input, int r, int c) {
+    for (int i = 0; i < r; i++) {
+      for (int j = 0; j < c; j++) {
+        if (input[i][j] < 10) {
+          System.out.print(" ");
+        }
+        System.out.print(" \t" + input[i][j]);
+      }
+      System.out.println("\n");
+    }
+  }
+
+  public static int[][] formMatrix(List<Integer> input, int r, int c) {
+    int[][] matrix = new int[r][c];
+    int count = 0;
+    for (int i = 0; i < r; i++) {
+      for (int j = 0; j < c; j++) {
+        matrix[i][j] = input.get(count++);
+      }
+    }
+    return matrix;
+  }
+
 }
 

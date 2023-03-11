@@ -26,16 +26,25 @@ import util.ArrayUtil;
 public class SquareOfSortedArray {
 
   public static void main(String[] args) {
-    int[] input = new int[]{-4, -1, 0, 3, 10};
-    squareOfSortedArray(input);
-    ArrayUtil.printArray(input);
+    Integer i = null;
+    System.out.println(i + 1);
   }
 
   private static int[] squareOfSortedArray(int[] nums) {
-    for (int i = 0; i < nums.length; i++) {
-      nums[i] *= nums[i];
+    int n = nums.length;
+    int[] res = new int[n];
+    int left = 0, right = n - 1, i = n - 1;
+    for (; left <= right; i--) {
+      int leftSquare = nums[left] * nums[left];
+      int rightSquare = nums[right] * nums[right];
+      if (leftSquare > rightSquare) {
+        res[i] = leftSquare;
+        left++;
+      } else {
+        res[i] = rightSquare;
+        right--;
+      }
     }
-    Arrays.sort(nums);
-    return nums;
+    return res;
   }
 }
