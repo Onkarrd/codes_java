@@ -1,5 +1,7 @@
 package arrays.insertion;
 
+import util.ArrayUtil;
+
 /**
  * You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n,
  * representing the number of elements in nums1 and nums2 respectively.
@@ -36,7 +38,28 @@ package arrays.insertion;
 public class MergeSortedArray {
 
   public void merge(int[] nums1, int m, int[] nums2, int n) {
-    
+    int p1 = 0;
+    int p2 = 0;
+    if (n == 0) {
+      return;
+    }
+    while (p1 < m + n && p2 < n) {
+      if (nums1[p1] <= nums2[p2]) {
+        p1++;
+      } else {
+        for (int c = m + n - 1; c > p1; c--) {
+          nums1[c] = nums1[c - 1];
+        }
+        nums1[p1] = nums2[p2];
+        p1++;
+        p2++;
+      }
+    }
+    while (p2 < n) {
+      nums1[m + p2] = nums2[p2];
+      p2++;
+    }
+    ArrayUtil.printArray(nums1);
   }
 
   public static void main(String[] args) {

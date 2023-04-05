@@ -27,24 +27,19 @@ import util.ArrayUtil;
 public class DuplicateZeros {
 
   public static void main(String[] args) {
-    int[] arr = new int[]{0, 0, 0, 0, 0, 0, 0};
+    int[] arr = new int[]{1, 0, 2, 3, 0, 4, 5, 0};
     duplicateZeros(arr);
 
   }
 
   private static void duplicateZeros(int[] arr) {
-    int i = 0, j = 0;
-    while (i < arr.length - 1) {
+    for (int i = 0; i < arr.length - 1; i++) {
       if (arr[i] == 0) {
-        int c = arr.length - 1;
-        int temp;
-        while (c > i + 1) {
+        for (int c = arr.length - 1; c > i; c--) {
           arr[c] = arr[c - 1];
-          c--;
         }
-        arr[++i] = 0;
+        i++;
       }
-      i++;
     }
     ArrayUtil.printArray(arr);
   }
