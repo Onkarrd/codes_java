@@ -29,21 +29,21 @@ import util.ArrayUtil;
 public class MoveZeros {
 
   public static void main(String[] args) {
-    int[] nums = new int[]{0, 1, 0, 3, 12};
+    int[] nums = new int[]{0, 0, 1};
     new MoveZeros().moveZeroes(nums);
     ArrayUtil.printArray(nums);
   }
 
   public void moveZeroes(int[] nums) {
     int length = nums.length;
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] == ygh0) {
-        for (int j = i + 1; j < length; j++) {
-          nums[j - 1] = nums[j];
-        }
-        nums[length - 1] = 0;
-        length--;
+    int nonZeroPtr = 0;
+    for (int i = 0; i < length; i++) {
+      if (nums[i] != 0) {
+        nums[nonZeroPtr++] = nums[i];
       }
+    }
+    for (int i = nonZeroPtr; i < nums.length; i++) {
+      nums[i] = 0;
     }
   }
 }

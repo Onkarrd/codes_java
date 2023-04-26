@@ -1,4 +1,4 @@
-package arrays;
+package arrays.misc;
 
 /**
  * LEETCODE 724. Find Pivot Index Easy 5.7K 603 Companies Given an array of integers nums, calculate the pivot index of

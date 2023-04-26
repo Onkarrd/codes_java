@@ -1,4 +1,4 @@
-package arrays;
+package arrays.misc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,30 +30,30 @@ public class PrintDigitsinInwardCircle {
     for (int i = 0; i < matrixSize; ) {
       for (int turn = noOfRights; turn < turnSize; turn++) {
         if (turnDirection.equals("DOWN")) {
-            if (turn == turnSize - (noOfRights + 1)) {
-                break;
-            }
+          if (turn == turnSize - (noOfRights + 1)) {
+            break;
+          }
           res[row++][turnSize - (noOfRights + 1)] = getValue(input, i++);
         }
         if (turnDirection.equals("RIGHT")) {
-            if (turn == turnSize - noOfRights) {
-                break;
-            }
+          if (turn == turnSize - noOfRights) {
+            break;
+          }
           row = noOfRights;
           col = turn;
           res[row][col] = getValue(input, i++);
         }
         if (turnDirection.equals("UP")) {
-            if (turn == turnSize - (noOfRights + 2)) {
-                break;
-            }
+          if (turn == turnSize - (noOfRights + 2)) {
+            break;
+          }
           res[--row][noOfRights] = getValue(input, i++);
         }
 
         if (turnDirection.equals("LEFT")) {
-            if (col == noOfRights) {
-                break;
-            }
+          if (col == noOfRights) {
+            break;
+          }
           res[turnSize - (noOfRights + 1)][--col] = getValue(input, i++);
         }
 
@@ -78,9 +78,9 @@ public class PrintDigitsinInwardCircle {
       }
     }
     for (int r = 0; r < turnSize; r++) {
-        for (int c = 0; c < turnSize; c++) {
-            System.out.print("\t" + res[r][c]);
-        }
+      for (int c = 0; c < turnSize; c++) {
+        System.out.print("\t" + res[r][c]);
+      }
       System.out.println("");
     }
 
@@ -88,9 +88,9 @@ public class PrintDigitsinInwardCircle {
 
   private static List<Integer> getInput(int length) {
     List<Integer> input = new ArrayList<>();
-      for (int i = 1; i <= length; i++) {
-          input.add(i);
-      }
+    for (int i = 1; i <= length; i++) {
+      input.add(i);
+    }
     return input;
   }
 

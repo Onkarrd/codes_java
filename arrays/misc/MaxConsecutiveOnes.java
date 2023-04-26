@@ -1,4 +1,4 @@
-package arrays;
+package arrays.misc;
 
 /**
  * Max Consecutive Ones
