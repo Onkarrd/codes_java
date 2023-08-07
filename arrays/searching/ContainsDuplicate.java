@@ -1,4 +1,4 @@
-package arrays.misc;
+package arrays.searching;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,10 +8,9 @@ class ContainsDuplicate {
 
   public static boolean containsDuplicate(int[] nums) {
     int end = nums.length - 1;
-    boolean changed = true;
     int t;
     while (end > 0) {
-      changed = false;
+      boolean changed = false;
       for (int i = 0; i < end; i++) {
         if (nums[i] == nums[i + 1]) {
           return true;
@@ -20,7 +19,7 @@ class ContainsDuplicate {
           ArrayUtil.swap(nums, i, i + 1);
           changed = true;
         }
-      }
+      }//for end
       if (!changed) {
         break;
       }
@@ -30,6 +29,6 @@ class ContainsDuplicate {
   }
 
   public static void main(String[] args) {
-    System.out.println(containsDuplicate(new int[]{2, 3, 1, 2, 3}));
+    System.out.println(containsDuplicate(new int[]{2, 3, 1, 21, 4}));
   }
 }
