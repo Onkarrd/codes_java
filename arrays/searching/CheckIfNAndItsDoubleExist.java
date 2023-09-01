@@ -1,5 +1,9 @@
 package arrays.searching;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 /**
  * Check If N and Its Double Exist Given an array arr of integers, check if there exist two indices i and j such that :
  * <p>
@@ -21,16 +25,19 @@ package arrays.searching;
 public class CheckIfNAndItsDoubleExist {
 
   public static void main(String[] args) {
-    System.out.println(new CheckIfNAndItsDoubleExist().checkIfExist(new int[]{-2, 0, 10, -19, 4, 6, -8}));
+    System.out.println(new CheckIfNAndItsDoubleExist().checkIfExist(new int[]{4, 1, 8, 11}));
   }
 
   public boolean checkIfExist(int[] arr) {
+    HashSet<Integer> set = new HashSet<>();
     for (int i = 0; i < arr.length; i++) {
-      for (int j = i; j < arr.length; j++) {
-        if (i != j && (arr[i] == 2 * arr[j] || arr[j] == 2 * arr[i])) {
-          return true;
-        }
+      set.add(arr[i]);
+    }
+    for (int i = 0; i < arr.length; i++) {
+      if (set.contains(arr[i] * 2) && arr[i] * 2 != arr[i]) {
+        return true;
       }
+      set.add(arr[i]);
     }
     return false;
   }

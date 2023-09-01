@@ -1,4 +1,4 @@
-package random;
+package misc;
 
 public interface InterfaceStaticMethod {
 
