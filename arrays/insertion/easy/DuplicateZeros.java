@@ -1,4 +1,4 @@
-package arrays.insertion;
+package arrays.insertion.easy;
 
 import util.ArrayUtil;
 
@@ -26,21 +26,42 @@ import util.ArrayUtil;
  */
 public class DuplicateZeros {
 
-  public static void main(String[] args) {
-    int[] arr = new int[]{1, 0, 2, 3, 0, 4, 5, 0};
-    duplicateZeros(arr);
+  public void duplicateZeros(int[] arr) {
+    int n = arr.length, count = 0;
 
-  }
-
-  private static void duplicateZeros(int[] arr) {
-    for (int i = 0; i < arr.length - 1; i++) {
-      if (arr[i] == 0) {
-        for (int c = arr.length - 1; c > i; c--) {
-          arr[c] = arr[c - 1];
-        }
-        i++;
+    for (int num : arr) {
+      if (num == 0) {
+        count++;
       }
     }
+    int i = n - 1;
+    int j = n + count - 1;
+
+    while (i >= 0 && j >= 0) {
+
+      if (arr[i] != 0) {
+        if (j < n) {
+          arr[j] = arr[i];
+        }
+
+      } else {
+        if (j < n) {
+          arr[j] = arr[i];
+        }
+        j--;
+        if (j < n) {
+          arr[j] = arr[i];
+        }
+      }
+
+      i--;
+      j--;
+    }
+  }
+
+  public static void main(String[] args) {
+    int arr[] = {1, 0, 2, 3, 0, 4, 5, 0};
+    new DuplicateZeros().duplicateZeros(arr);
     ArrayUtil.printArray(arr);
   }
 }

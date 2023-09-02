@@ -3,6 +3,8 @@ package arrays.matrix;
 import java.util.Arrays;
 
 /**
+ * https://leetcode.com/problems/richest-customer-wealth/
+ * <p>
  * 1672. Richest Customer Wealth Easy 3.8K 340 Companies You are given an m x n integer grid accounts where
  * accounts[i][j] is the amount of money the ith customer has in the jth bank. Return the wealth that the richest
  * customer has.
