@@ -3,6 +3,7 @@ package strings;
 import recursion.GCD;
 
 /**
+ * https://leetcode.com/problems/greatest-common-divisor-of-strings/
  * <pre>
  *   1071. Greatest Common Divisor of Strings
  * Easy

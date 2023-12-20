@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * https://leetcode.com/problems/isomorphic-strings/
+ * <p>
  * 205. Isomorphic Strings Easy 5.8K 1.1K Companies Given two strings s and t, determine if they are isomorphic.
  * <p>
  * Two strings s and t are isomorphic if the characters in s can be replaced to get t.
@@ -33,7 +35,6 @@ public class IsomorphicStrings {
   public boolean isIsomorphic(String s, String t) {
     Map m = new HashMap();
     for (Integer i = 0; i < s.length(); ++i) {
-      System.out.println(">>>>>> " + s.charAt(i) + "     " + t.charAt(i) + "        " + m);
       if (m.put(s.charAt(i), i) != m.put(t.charAt(i) + "t", i)) {
         return false;
       }
@@ -42,10 +43,6 @@ public class IsomorphicStrings {
   }
 
   public static void main(String[] args) {
-    //System.out.println(new IsomorphicStrings().isIsomorphic("bbbaaaba", "aaabbbba"));
-    Map m = new HashMap();
-    System.out.println(m.put("a", 1));
-    System.out.println(m.put("a", 2));
-    System.out.println(m.put("a", 3));
+    System.out.println(new IsomorphicStrings().isIsomorphic("bbbaaaba", "aaabbbba"));
   }
 }

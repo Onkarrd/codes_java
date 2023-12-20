@@ -1,4 +1,4 @@
-package features8;
+package java8;
 
 import java.util.List;
 import java.util.Map;

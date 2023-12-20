@@ -1,9 +1,12 @@
-package arrays.misc;
+package arrays.searching.easy;
 
 import java.util.Arrays;
 import java.util.List;
 
 /**
+ * https://leetcode.com/problems/is-subsequence/
+ * <p>
+ * <p>
  * Is Subsequence Easy 6.6K 373 Companies Given two strings s and t, return true if s is a subsequence of t, or false
  * otherwise.
  * <p>

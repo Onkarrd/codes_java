@@ -21,10 +21,7 @@ public class FrequentWord {
     for (int i = 0; i < inputChars.length; i++) {
       String word = inputChars[i];
       if (word.contains("!") || word.contains(",") || word.contains("?") || word.contains(".")) {
-        word = word.replace("!", "");
-        word = word.replace(",", "");
-        word = word.replace("?", "");
-        word = word.replace(".", "");
+        word = word.replace("!", "").replace(",", "").replace("?", "").replace(".", "");
       }
       Emp e = new Emp(word);
       if (freqWords.containsKey(e)) {

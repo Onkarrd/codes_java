@@ -1,6 +1,5 @@
 package arrays.misc;
 
-import java.util.ArrayList;
 import util.ArrayUtil;
 
 class RemoveDuplicate {

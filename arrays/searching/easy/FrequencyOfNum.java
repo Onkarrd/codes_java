@@ -1,4 +1,4 @@
-package arrays.misc;
+package arrays.searching.easy;
 
 public class FrequencyOfNum {
 

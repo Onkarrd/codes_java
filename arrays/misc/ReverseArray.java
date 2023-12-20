@@ -1,5 +1,7 @@
 package arrays.misc;
 
+import util.ArrayUtil;
+
 class ReverseArray {
 
   public static void main(String[] args) {
@@ -10,15 +12,13 @@ class ReverseArray {
     int low = 0;
     int high = arr.length - 1;
     while (low < high) {
-      int temp = arr[low];
-      arr[low] = arr[high];
-      arr[high] = temp;
+      ArrayUtil.swap(arr, low, high);
       low++;
       high--;
     }
 
-      for (int j = 0; j < arr.length; j++) {
-          System.out.print(" " + arr[j]);
-      }
+    for (int j = 0; j < arr.length; j++) {
+      System.out.print(" " + arr[j]);
+    }
   }
 }

@@ -1,9 +1,7 @@
-package features8.joda;
+package java8.joda;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.Temporal;
 
 public class JodaDemo {
 

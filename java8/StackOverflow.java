@@ -1,4 +1,4 @@
-package features8;
+package java8;
 
 public class StackOverflow {
 

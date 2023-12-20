@@ -1,4 +1,4 @@
-package features8.lamda;
+package java8.lamda;
 
 
 interface Interf {

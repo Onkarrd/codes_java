@@ -1,4 +1,4 @@
-package arrays.misc;
+package arrays.searching;
 
 import java.util.ArrayList;
 

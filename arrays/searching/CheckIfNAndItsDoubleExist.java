@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
+ * https://leetcode.com/problems/check-if-n-and-its-double-exist/
+ * <p>
+ * <p>
  * Check If N and Its Double Exist Given an array arr of integers, check if there exist two indices i and j such that :
  * <p>
  * i != j 0 <= i, j < arr.length arr[i] == 2 * arr[j]

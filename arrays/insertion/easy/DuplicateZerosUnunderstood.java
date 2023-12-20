@@ -24,7 +24,7 @@ import util.ArrayUtil;
  * <p>
  * 1 <= arr.length <= 104 0 <= arr[i] <= 9
  */
-public class DuplicateZeros2 {
+public class DuplicateZerosUnunderstood {
 
   public static void main(String[] args) {
     int[] arr = new int[]{1, 0, 2, 3, 0, 4, 5, 0};
