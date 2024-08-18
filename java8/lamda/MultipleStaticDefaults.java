@@ -20,10 +20,10 @@ interface Interf {
   }
 }
 
-public class Examples implements Interf {
+public class MultipleStaticDefaults implements Interf {
 
   public static void main(String[] args) {
-    Interf i = new Examples();
+    Interf i = new MultipleStaticDefaults();
     Interf.m1();
     Interf.m2();
   }

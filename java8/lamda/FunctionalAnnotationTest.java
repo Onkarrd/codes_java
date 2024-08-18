@@ -10,9 +10,9 @@ interface Interface1 {
 public class FunctionalAnnotationTest {
 
   public static void main(String[] args) {
-    Interface1 i1 = () -> {
+    /*Interface1 i1 = () -> {
       System.out.println("from m1");
-    };
-    i1.m1();
+    };*/
+    //i1.m1();
   }
 }
