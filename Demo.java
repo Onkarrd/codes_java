@@ -1,16 +1,24 @@
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-import util.ArrayUtil;
-
 public class Demo {
 
-  /// output 99
+  public static boolean isSubsequence(String s, String t) {
+    int count = 0;
+    if (s.length() == 0) {
+      return true;
+    }
+    char[] sa = s.toCharArray();
+    char[] ta = t.toCharArray();
+    for (int i = 0; i < t.length(); i++) {
+      if (ta[i] == sa[count]) {
+        count++;
+      }
+      if (count == s.length()) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   public static void main(String[] args) {
-    System.out.println(Long.MAX_VALUE);
+    System.out.println(isSubsequence("abc", "ahbgdc"));
   }
 }
