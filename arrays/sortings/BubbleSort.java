@@ -9,11 +9,11 @@ public class BubbleSort {
   public static void main(String[] args) {
     int[] a = {115, 55, 47, 31, 15};
     int n = a.length - 1;
-    for (int i = 0; i < n; i++) {
-      for (int j = n; j > i; j--) {
+    for (int i = n; i > 0; i--) {
+      for (int j = 0; j < i; j++) {
         {
-          if (a[j] < a[j - 1]) {
-            ArrayUtil.swap(a, j, j - 1);
+          if (a[j] > a[j + 1]) {
+            ArrayUtil.swap(a, j, j + 1);
           }
         }
         ArrayUtil.printArray(a);

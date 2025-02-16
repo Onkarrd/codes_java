@@ -1,8 +1,11 @@
+package arrays.sortings;
+
 import java.util.ArrayList;
 import java.util.List;
 import util.ArrayUtil;
 
-public class Demo {
+public class MergeSort {
+
 
   public int[] mergeSort(int[] arr) {
     mergeSortHelper(arr, 0, arr.length - 1);
@@ -48,6 +51,6 @@ public class Demo {
   }
 
   public static void main(String[] args) {
-    ArrayUtil.printArray(new Demo().mergeSort(new int[]{7, 4, 1, 5, 3}));
+    ArrayUtil.printArray(new MergeSort().mergeSort(new int[]{7, 4, 1, 5, 3}));
   }
 }

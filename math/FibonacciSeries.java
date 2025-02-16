@@ -1,4 +1,4 @@
-package misc;
+package math;
 
 public class FibonacciSeries {
 
