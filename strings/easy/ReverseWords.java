@@ -18,12 +18,13 @@ public class ReverseWords {
       start++;
       end--;
     }
-    String reverse = "";
+    StringBuilder reverse = new StringBuilder();
     for (String str : strings) {
-      if (!str.isEmpty())
-        reverse += " " + str;
+      if (!str.isEmpty()) {
+        reverse.append(" ").append(str);
+      }
     }
-    return reverse.trim();
+    return reverse.toString().trim();
   }
 
   public static void main(String[] args) {

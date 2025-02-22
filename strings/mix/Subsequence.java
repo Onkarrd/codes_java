@@ -1,4 +1,4 @@
-package strings;
+package strings.mix;
 
 /**
  * https://leetcode.com/problems/is-subsequence/

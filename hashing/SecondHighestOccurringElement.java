@@ -6,10 +6,10 @@ import java.util.Map;
 public class SecondHighestOccurringElement {
 
   public static void main(String[] args) {
-    System.out.println(new SecondHighestOccurringElement().mostFrequentElement(new int[]{1, 3, 3, 2, 2}));
+    System.out.println(new SecondHighestOccurringElement().secondHighestOccurringElement(new int[]{1, 3, 3, 3, 2, 2}));
   }
 
-  public int mostFrequentElement(int[] nums) {
+  public int secondHighestOccurringElement(int[] nums) {
     HashMap<Integer, Integer> map = new HashMap<>();
     for (int i = 0; i < nums.length; i++) {
       map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
@@ -18,11 +18,22 @@ public class SecondHighestOccurringElement {
     for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
       if (entry.getValue() > max) {
         max = entry.getValue();
-        maxFreqNumber = entry.getKey();
-      } else if (max == entry.getValue()) {
-        maxFreqNumber = Math.min(maxFreqNumber, entry.getKey());
       }
     }
-    return maxFreqNumber;
+    int FirstMax = max;
+    max = Integer.MIN_VALUE;
+    boolean secondMaxFound = false;
+    for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+      if (entry.getValue() < FirstMax) {
+        secondMaxFound = true;
+        if (entry.getValue() > max) {
+          max = entry.getValue();
+          maxFreqNumber = entry.getKey();
+        } else if (max == entry.getValue()) {
+          maxFreqNumber = Math.min(maxFreqNumber, entry.getKey());
+        }
+      }
+    }
+    return secondMaxFound ? maxFreqNumber : -1;
   }
 }
