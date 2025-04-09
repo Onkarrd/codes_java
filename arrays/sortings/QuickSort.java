@@ -1,32 +1,47 @@
 package arrays.sortings;
 
+import util.ArrayUtil;
+
 public class QuickSort {
 
-  public void quickSort(int[] arr, int low, int high) {
+
+  public static void main(String[] args) {
+
+    ArrayUtil.printArray(new QuickSort().quickSort(new int[]{7, 4, 1, 1, 5, 5, 8, 3}));
+  }
+
+  public int[] quickSort(int[] nums) {
+    quickSort(nums, 0, nums.length - 1);
+    return nums;
+  }
+
+  private void quickSort(int[] nums, int low, int high) {
     if (low >= high) {
       return;
     }
-    int p = partition(arr, low, high);
-    quickSort(arr, low, p - 1);
-    quickSort(arr, p + 1, high);
+    int p = partition(nums, low, high);
+    quickSort(nums, low, p - 1);
+    quickSort(nums, p + 1, high);
   }
 
-  int partition(int[] arr, int low, int high) {
+  private int partition(int[] nums, int low, int high) {
 
-    int pivot = arr[high];
-    int leftP = low;
-    int rightP = high;
-    while (leftP < rightP) {
-      while (arr[leftP] <= pivot && leftP < rightP) {
-        leftP++;
+    int pivot = nums[low];
+    int i = low;
+    int j = high;
+    while (i < j) {
+      while (nums[i] <= pivot && i <= high - 1) {
+        i++;
       }
-      while (arr[rightP] >= pivot && leftP < rightP) {
-        rightP--;
+      while (nums[j] > pivot && j >= low + 1) {
+        j--;
       }
-      swap(arr, leftP, rightP);
+      if (i < j) {
+        swap(nums, i, j);
+      }
     }
-    swap(arr, leftP, high);
-    return leftP;
+    ArrayUtil.swap(nums, j, low);
+    return j;
   }
 
   void swap(int[] arr, int i, int j) {
@@ -34,27 +49,4 @@ public class QuickSort {
     arr[i] = arr[j];
     arr[j] = temp;
   }
-
-  public static void main(String[] args) {
-
-    int[] numbers = {35, 78, 35, 80, 89, 83, 39, 42, 81};
-
-    /*
-     * for (int i = 0; i < numbers.length - 1; i++) { numbers[i] = new Random().nextInt(100); }
-     */
-
-    System.out.println("Before :");
-    printArray(numbers);
-    new QuickSort().quickSort(numbers, 0, numbers.length - 1);
-    System.out.println("After :");
-    printArray(numbers);
-
-  }
-
-  private static void printArray(int[] numbers) {
-    for (int i = 0; i < numbers.length - 1; i++) {
-      System.out.println(numbers[i]);
-    }
-  }
-
 }

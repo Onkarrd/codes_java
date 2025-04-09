@@ -1,22 +1,22 @@
+package arrays.matrix;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Queue;
+import java.util.stream.IntStream;
 import util.ArrayUtil;
 
 public class Demo {
 
 
   public static void main(String[] args) {
-    int i = 1;
-    printOneToN(1, 10);
+    int[] ints = {1, 6, 3, 14, 5};
+    System.out.println(IntStream.of(ints).sum());
   }
 
-  public static void printOneToN(int i, int n) {
-    if (i > n) {
-      return;
-    }
-    printOneToN(i + 1, n);
-    System.out.println(i);
-  }
+  public int[] twoSum(int[] nums, int target) {
+    int[] result = new int[2];
 
+    return result;
+  }
 }

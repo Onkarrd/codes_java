@@ -3,23 +3,20 @@ package recursion;
 public class Palindrome {
 
   public static void main(String[] args) {
-    System.out.println("isPalindrome : " + isPalindrome("AAAAAAAAAABAAAAAAAAA"));
+    System.out.println("isPalindrome : " + palindromeCheck("AAAAAAAAAABAAAAAAAAA"));
   }
 
-  private static boolean isPalindrome(String str) {
-    char[] input = str.toCharArray();
-    int i = 0;
-    int n = str.length();
-    return isPalindrome(input, i, n);
+  public static boolean palindromeCheck(String s) {
+    return isPalindrome(s, 0, s.length() - 1);
   }
 
-  private static boolean isPalindrome(char[] input, int i, int n) {
-      if (i >= n) {
-          return true;
-      }
-      if (input[i] != input[n - i - 1]) {
-          return false;
-      }
-    return isPalindrome(input, i + 1, n);
+  private static boolean isPalindrome(String s, int left, int right) {
+    if (left >= right) {
+      return true;
+    }
+    if (s.charAt(left) != s.charAt(right)) {
+      return false;
+    }
+    return isPalindrome(s, left + 1, right - 1);
   }
 }

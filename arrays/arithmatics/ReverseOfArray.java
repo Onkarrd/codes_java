@@ -8,7 +8,7 @@ public class ReverseOfArray {
 
   }
 
-  public void reverse(int[] arr, int n) {
+  public static void reverse(int[] arr) {
     int[] rev = new int[arr.length];
     int start = 0, end = arr.length - 1;
     while (start < end) {
