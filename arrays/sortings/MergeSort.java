@@ -12,7 +12,7 @@ public class MergeSort {
     return arr;
   }
 
-  private void mergeSortHelper(int[] arr, int low, int high) {
+  public static void mergeSortHelper(int[] arr, int low, int high) {
     if (low >= high) {
       return;
     }
@@ -22,7 +22,7 @@ public class MergeSort {
     merge(arr, low, mid, high);
   }
 
-  private void merge(int[] arr, int low, int mid, int high) {
+  private static void merge(int[] arr, int low, int mid, int high) {
     int left = low;
     int right = mid + 1;
     List<Integer> list = new ArrayList<>();
